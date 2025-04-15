@@ -6,7 +6,7 @@
     <h1>Data Tables</h1>
     <nav>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
         <li class="breadcrumb-item">Tables</li>
         <li class="breadcrumb-item active">Data</li>
       </ol>
@@ -19,7 +19,7 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Datatables</h5>
+            <a href="{{ route('add-new') }}"><button class="mt-4 mb-4 btn btn-sm btn-primary">Add New Record</button></a>
             
 
             <!-- Table with stripped rows -->
