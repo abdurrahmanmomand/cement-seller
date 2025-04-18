@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('truck_number');
             $table->decimal('tuns_in_a_truck',10,3);
             $table->decimal('price_per_truck',10,3);
+            $table->decimal('profit_per_ton',10,3);
             $table->decimal('price_per_tun',10,3); //add automatic
             $table->decimal('amount_paid_to_vendor',10,3);
             $table->decimal('amount_to_pay_to_vendor',10,3); //add automatic

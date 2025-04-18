@@ -10,7 +10,7 @@
       </li><!-- End Dashboard Nav -->
      
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('show-all') }}">
+        <a class="nav-link collapsed" href="{{ route('show-all.index') }}">
           <i class="bi bi-table"></i>
           <span>Show All Record</span>
         </a>

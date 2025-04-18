@@ -21,51 +21,52 @@
           <h5 class="card-title">Multi Columns Form</h5>
 
           <!-- Multi Columns Form -->
-          <form action="{{ route('show-all.store') }}" method="POST" class="row g-3">
+          <form action="{{ route('show-all.update',$record->id) }}" method="POST" class="row g-3">
             @csrf
+            @method('PUT')
             <div class="col-md-3">
               <label  class="form-label">Vendor Name</label>
-              <input type="text" name="vendor_name" class="form-control" placeholder="Enter Vendor Name">
+              <input type="text" value="{{ $record->vendor_name }}" name="vendor_name" class="form-control" placeholder="Enter Vendor Name">
             </div>
             <div class="col-md-3">
               <label  class="form-label">Truck Number</label>
-              <input type="varchar" name="truck_number" class="form-control" placeholder="Enter Truck Number">
+              <input type="varchar" value="{{ $record->truck_number }}"  name="truck_number" class="form-control" placeholder="Enter Truck Number">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Tuns </label>
-              <input type="number" name="tuns_in_a_truck" class="form-control" placeholder="Numbers">
+              <input type="number" value="{{ $record->tuns_in_a_truck }}" name="tuns_in_a_truck" class="form-control" placeholder="Numbers">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Price Per Truck </label>
-              <input type="number" name="price_per_truck" class="form-control" placeholder="$">
+              <input type="number" value="{{ $record->price_per_truck }}" name="price_per_truck" class="form-control" placeholder="$">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Profit Per Tun </label>
-              <input type="number" name="profit_per_ton" class="form-control" placeholder="$">
+              <input type="number"  value="{{ $record->profit_per_ton }}" name="profit_per_ton" class="form-control" placeholder="$">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Cash Paid To Vender </label>
-              <input type="number" name="amount_paid_to_vendor" class="form-control" placeholder="$">
+              <input type="number" value="{{ $record->amount_paid_to_vendor }}" name="amount_paid_to_vendor" class="form-control" placeholder="$">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Customer Name </label>
-              <input type="text" name="customer_name" class="form-control" placeholder="Enter Customer Name">
+              <input type="text" value="{{ $record->customer_name }}"  name="customer_name" class="form-control" placeholder="Enter Customer Name">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Rent Per Truck </label>
-              <input type="number" name="rent_per_truck" class="form-control" placeholder="$" >
+              <input type="number" value="{{ $record->rent_per_truck }}"   name="rent_per_truck" class="form-control" placeholder="$" >
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Tax Per Truck </label>
-              <input type="number" name="tax_per_truck" class="form-control" placeholder="$">
+              <input type="number" value="{{ $record->tax_per_truck }}" name="tax_per_truck" class="form-control" placeholder="$">
             </div>
             <div class="col-md-6">
               <label  class="form-label"> Customer Location </label>
-              <input type="address" name="customer_location" class="form-control" placeholder="Enter Customer Address">
+              <input type="address" value="{{ $record->customer_location }}" name="customer_location" class="form-control" placeholder="Enter Customer Address">
             </div>
             <div class="col-md-6">
               <label  class="form-label"> Cash Recieved From Customer </label>
-              <input type="number" name="recieved_amount_from_customer" class="form-control" placeholder="$">
+              <input type="number" value="{{ $record->recieved_amount_from_customer }}"  name="recieved_amount_from_customer" class="form-control" placeholder="$">
             </div>
 
                 <input style="width:7rem; display:block; margin:auto;"class="mt-4 btn btn-primary btn-sm" type="submit" name="submit">

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Allrecord extends Model
 {
-    protected $table = 'allrecord';
+    protected $table = 'allrecords';
 
     protected $fillable = [
         'vendor_name',
@@ -14,6 +14,7 @@ class Allrecord extends Model
         'tuns_in_a_truck',
         'price_per_tun',
         'price_per_truck',
+        'profit_per_ton',
         'amount_paid_to_vendor',
         'amount_to_pay_to_vendor',
         'customer_name',
@@ -25,15 +26,16 @@ class Allrecord extends Model
         'tax_per_truck',
         'tax_per_tun'
     ];
-    
+
     protected static function booted()
     {
         static::saving(function ($allrecord) {
             // Prevent division by zero
             if ($allrecord->tuns_in_a_truck != 0) {
-                $allrecord->price_per_tun = $allrecord->price_per_truck / $allrecord->tuns_in_a_truck;
-                $allrecord->rent_per_tun = $allrecord->rent_per_truck / $allrecord->tuns_in_a_truck;
-                $allrecord->tax_per_tun = $allrecord->tax_per_truck / $allrecord->tuns_in_a_truck;
+                $allrecord->price_per_tun = round($allrecord->price_per_truck / $allrecord->tuns_in_a_truck, 3);
+                $allrecord->rent_per_tun  = round($allrecord->rent_per_truck / $allrecord->tuns_in_a_truck, 3);
+                $allrecord->tax_per_tun   = round($allrecord->tax_per_truck / $allrecord->tuns_in_a_truck, 3);
+
             }
 
             // Set calculated fields
