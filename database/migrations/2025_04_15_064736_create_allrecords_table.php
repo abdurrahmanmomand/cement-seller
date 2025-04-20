@@ -29,7 +29,9 @@ return new class extends Migration
             $table->decimal('rent_per_tun',10,3);   //add automatic
             $table->decimal('tax_per_truck',10,3);
             $table->decimal('tax_per_tun',10,3);   //add automatic
-            $table->timestamps();
+            $table->date('created_at')->nullable();
+            $table->date('updated_at')->nullable();
+
         });
     }
 

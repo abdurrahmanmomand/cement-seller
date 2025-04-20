@@ -13,20 +13,30 @@
     </nav>
   </div><!-- End Page Title -->
 
-  <section class="section" style="width:160%; position: relative; z-index: 1000; " >
+  <section class="section mt-5" style="width:180%; position: relative; z-index: 9999;" >
     <div class="row">
       <div class="col-lg-12">
 
         <div class="card">
           <div class="card-body">
-            <a href="{{ route('show-all.create') }}"><button class="mt-4 mb-4 btn btn-sm btn-primary">Add New Record</button></a>
+            <div style="width: 100%; display:flex; flex-direction: row; align-items:center">
+
+                <a href="{{ route('show-all.create') }}"><button class="mt-4 mb-4 btn btn-sm btn-primary">Add New Record</button></a>
+                <div class="search-bar" style="margin-left:20%;">
+                    <form class="search-form d-flex align-items-center" method="POST" action="{{ route('search') }}">
+                        @csrf
+                      <input type="varchar" name="query" placeholder="Search" title="Enter search keyword">
+                      <button type="submit" name="submit" title="Search"><i class="bi bi-search"></i></button>
+                    </form>
+                  </div>
+            </div>
 
 
             <!-- Table with stripped rows -->
             <style>
               .custom-table th, .custom-table td {
-                border-left: 2px solid #00bfff;  /* Light Blue - vertical borders */
-                border-bottom: 2px solid #90ee90; /* Light Green - horizontal borders */
+                border-left: 2px solid #00bfff;    /* Light Blue - vertical borders */
+                border-bottom: 2px solid #90ee90;  /* Light Green - horizontal borders */
                 padding: 8px;
                 text-align: center;
               }
@@ -41,11 +51,12 @@
               }
             </style>
 
-            <table class="custom-table">
+            <table class="custom-table mb-2">
               <thead>
                 <tr>
                   <th>Vendor_Name</th>
                   <th>Customer_Name</th>
+                  <th>Customer_Location</th>
                   <th>Trucks NO</th>
                   <th>Tons</th>
                   <th>Price / Ton</th>
@@ -68,6 +79,7 @@
                 <tr>
                     <td>{{ $record->vendor_name }}</td>
                     <td>{{ $record->customer_name }}</td>
+                    <td>{{ $record->customer_location }}</td>
                   <td>{{ $record->truck_number }}</td>
                   <td>{{ $record->tuns_in_a_truck }}</td>
                   <td>{{ $record->price_per_tun }}</td>
@@ -80,7 +92,7 @@
                   <td>{{ round( $record->tuns_in_a_truck* $record->profit_per_ton, 3) }}</td>
                   <td>{{ $record->recieved_amount_from_customer }}</td>
                   <td>{{ $record->remaining_amount_to_customer }}</td>
-                  <td>{{ $record->created_at }}</td>
+                  <td>{{ $record->created_at->format('Y-m-d') }}</td>
                   <td><a href="{{ route('show-all.edit',$record->id) }}" class="btn btn-sm btn-primary">Edit</a></td>
                   <td><form action="{{ route('show-all.destroy', $record->id) }}" method="POST" style="display: inline;">
                     @csrf
@@ -97,7 +109,7 @@
                 <!-- Add more rows here -->
               </tbody>
             </table>
-
+         {{ $allrecords->links() }}
 
 
 

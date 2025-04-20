@@ -12,7 +12,8 @@ class ShowallController extends Controller
      */
     public function index()
     {
-        $allrecords =Allrecord::all();
+        $allrecords = Allrecord::orderBy('created_at', 'desc')->paginate(10);
+        // dd($allrecords);
         return view('all-records',compact('allrecords'));
     }
 
@@ -34,7 +35,7 @@ class ShowallController extends Controller
       "vendor_name" => 'required',
       "truck_number" => 'required',
       "tuns_in_a_truck" => 'required',
-      "price_per_truck" => 'required',
+      "price_per_tun" => 'required',
       "profit_per_ton" => 'required',
       "amount_paid_to_vendor" => 'required',
       "customer_name" => 'required',
@@ -47,7 +48,7 @@ class ShowallController extends Controller
             "vendor_name" => $request->vendor_name,
             "truck_number" => $request->truck_number,
             "tuns_in_a_truck" => $request->tuns_in_a_truck,
-            "price_per_truck" => $request-> price_per_truck,
+            "price_per_tun" => $request-> price_per_tun,
             "profit_per_ton" => $request->profit_per_ton,
             "amount_paid_to_vendor" => $request-> amount_paid_to_vendor,
             "customer_name" => $request->customer_name,

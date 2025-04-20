@@ -37,34 +37,34 @@
               <input type="number" value="{{ $record->tuns_in_a_truck }}" name="tuns_in_a_truck" class="form-control" placeholder="Numbers">
             </div>
             <div class="col-md-3">
-              <label  class="form-label"> Price Per Truck </label>
-              <input type="number" value="{{ $record->price_per_truck }}" name="price_per_truck" class="form-control" placeholder="$">
+              <label  class="form-label"> Price Per Ton </label>
+              <input type="number" value="{{ $record->price_per_tun }}" name="price_per_tun" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Profit Per Tun </label>
               <input type="number"  value="{{ $record->profit_per_ton }}" name="profit_per_ton" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Cash Paid To Vender </label>
               <input type="number" value="{{ $record->amount_paid_to_vendor }}" name="amount_paid_to_vendor" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Customer Name </label>
               <input type="text" value="{{ $record->customer_name }}"  name="customer_name" class="form-control" placeholder="Enter Customer Name">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Rent Per Truck </label>
               <input type="number" value="{{ $record->rent_per_truck }}"   name="rent_per_truck" class="form-control" placeholder="$" >
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label  class="form-label"> Tax Per Truck </label>
               <input type="number" value="{{ $record->tax_per_truck }}" name="tax_per_truck" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label  class="form-label"> Customer Location </label>
               <input type="address" value="{{ $record->customer_location }}" name="customer_location" class="form-control" placeholder="Enter Customer Address">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label  class="form-label"> Cash Recieved From Customer </label>
               <input type="number" value="{{ $record->recieved_amount_from_customer }}"  name="recieved_amount_from_customer" class="form-control" placeholder="$">
             </div>

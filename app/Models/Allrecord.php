@@ -32,7 +32,7 @@ class Allrecord extends Model
         static::saving(function ($allrecord) {
             // Prevent division by zero
             if ($allrecord->tuns_in_a_truck != 0) {
-                $allrecord->price_per_tun = round($allrecord->price_per_truck / $allrecord->tuns_in_a_truck, 3);
+                $allrecord->price_per_truck = round($allrecord->price_per_tun * $allrecord->tuns_in_a_truck, 3);
                 $allrecord->rent_per_tun  = round($allrecord->rent_per_truck / $allrecord->tuns_in_a_truck, 3);
                 $allrecord->tax_per_tun   = round($allrecord->tax_per_truck / $allrecord->tuns_in_a_truck, 3);
 
@@ -43,4 +43,9 @@ class Allrecord extends Model
             $allrecord->remaining_amount_to_customer = $allrecord->price_per_truck - $allrecord->recieved_amount_from_customer;
         });
     }
+    protected $casts = [
+        'created_at' => 'date',
+        'updated_at' => 'date',
+    ];
+
 }

@@ -10,19 +10,20 @@
       Designed and Developed by <a href="https://bootstrapmade.com/">Abdul Rahman</a>
     </div>
     <!-- Bootstrap JS Bundle (includes Popper.js) -->
+<!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
  <!-- Vendor JS Files -->
- <script src="{{ asset('build/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/chart.js/chart.umd.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/echarts/echarts.min.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/quill/quill.min.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/tinymce/tinymce.min.js') }}"></script>
- <script src="{{ asset('build/assets/vendor/php-email-form/validate.js') }}"></script>
+ <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/chart.js/chart.umd.js') }}"></script>
+ <script src="{{ asset('assets/vendor/echarts/echarts.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/quill/quill.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+ <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+ <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
  <!-- Template Main JS File -->
- <script src="{{ asset('build/assets/js/main.js') }}"></script>
+ <script src="{{ asset('assets/js/main.js') }}"></script>
 
   </footer>

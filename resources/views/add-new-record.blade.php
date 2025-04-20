@@ -25,45 +25,45 @@
             @csrf
             <div class="col-md-3">
               <label  class="form-label">Vendor Name</label>
-              <input type="text" name="vendor_name" class="form-control" placeholder="Enter Vendor Name">
+              <input type="text" name="vendor_name" class="form-control">
             </div>
             <div class="col-md-3">
               <label  class="form-label">Truck Number</label>
-              <input type="varchar" name="truck_number" class="form-control" placeholder="Enter Truck Number">
+              <input type="varchar" name="truck_number" class="form-control">
             </div>
             <div class="col-md-3">
               <label  class="form-label"> Tuns </label>
-              <input type="number" name="tuns_in_a_truck" class="form-control" placeholder="Numbers">
+              <input type="number" name="tuns_in_a_truck" class="form-control">
             </div>
             <div class="col-md-3">
-              <label  class="form-label"> Price Per Truck </label>
-              <input type="number" name="price_per_truck" class="form-control" placeholder="$">
+              <label  class="form-label"> Price Per Ton </label>
+              <input type="number" name="price_per_tun" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Profit Per Tun </label>
               <input type="number" name="profit_per_ton" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Cash Paid To Vender </label>
               <input type="number" name="amount_paid_to_vendor" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Customer Name </label>
-              <input type="text" name="customer_name" class="form-control" placeholder="Enter Customer Name">
+              <input type="text" name="customer_name" class="form-control">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 my-5">
               <label  class="form-label"> Rent Per Truck </label>
               <input type="number" name="rent_per_truck" class="form-control" placeholder="$" >
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label  class="form-label"> Tax Per Truck </label>
               <input type="number" name="tax_per_truck" class="form-control" placeholder="$">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label  class="form-label"> Customer Location </label>
-              <input type="address" name="customer_location" class="form-control" placeholder="Enter Customer Address">
+              <input type="address" name="customer_location" class="form-control">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label  class="form-label"> Cash Recieved From Customer </label>
               <input type="number" name="recieved_amount_from_customer" class="form-control" placeholder="$">
             </div>
